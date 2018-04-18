@@ -29,14 +29,10 @@ public class DarkTile extends Tile {
 
         relocate(x * Board.tileSize, y * Board.tileSize);
 
-        setFill(Color.valueOf("#26724C"));
-
-        setOnMousePressed(e -> {
-            setFill(Color.valueOf("#105030"));
-        });
+        setFill(Color.valueOf("#1A7E4C"));
 
         setOnMouseReleased(e -> {
-            setFill(Color.valueOf("#26724C"));
+            setFill(Color.valueOf("#1A7E4C"));
         });
     }
 }

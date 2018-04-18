@@ -5,31 +5,29 @@ import javafx.scene.Group;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Board {
+public abstract class Board {
     final static int heigth = 8;
     final static int width = 8;
     final static int tileSize = 80;
 
-    List<Tile> tiles = new ArrayList<Tile>();
-    List<Piece> pieces = new ArrayList<Piece>();
+    protected Piece activePiece;
 
+    protected List<Tile> tiles = new ArrayList<Tile>();
+    protected List<Piece> pieces = new ArrayList<Piece>();
 
-    Board() {
-        TileCreator creator = new TileCreator();
+    public abstract Group tilesToGroup();
 
-        for (int x = 0; x < 8; x++) {
-            for (int y = 0; y < 8; y++) {
-                tiles.add(creator.factoryMethod(x, y));
-            }
-        }
-    }
+    public abstract Group piecesToGroup();
 
-    public Group tilesToGroup(){
-        Group tilesGroup = new Group();
+    public abstract Tile getTile(int x, int y);
 
-        for (Tile t : tiles) {
-            tilesGroup.getChildren().add(t);
-        }
-        return tilesGroup;
-    }
+    public abstract Piece getPiece(int x, int y);
+
+    public abstract void setActivePiece(int x, int y);
+
+    public abstract Piece getActivePiece();
+
+    public abstract void relocateActivePiece(int x, int y);
+
+    public abstract void unsetActivePiece();
 }

@@ -1,8 +1,6 @@
 package checkers;
 
 import javafx.scene.paint.Color;
-import java.awt.*;
-import javafx.scene.shape.Rectangle;
 
 public class LightTile extends Tile {
     @Override
