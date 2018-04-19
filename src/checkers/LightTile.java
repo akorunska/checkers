@@ -13,6 +13,16 @@ public class LightTile extends Tile {
         return null;
     }
 
+    @Override
+    void lightBackgroundOn() {
+
+    }
+
+    @Override
+    void lightBackgroundOff() {
+
+    }
+
     LightTile(int xCoord, int yCoord){
         x = xCoord;
         y = yCoord;

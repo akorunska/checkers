@@ -2,6 +2,7 @@ package checkers;
 
 import javafx.scene.Group;
 
+import javax.security.sasl.SaslServer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,8 +71,12 @@ public class SimpleBoard extends Board{
         Tile oldPlace = getTile(activePiece.x, activePiece.y);
 
         activePiece.move(x, y);
-        oldPlace.setPiece(null);
-        newPlace.setPiece(activePiece);
+        if (oldPlace.setPiece(null))
+            System.out.println("successully freed old tile");
+        if (newPlace.setPiece(activePiece))
+            System.out.println("sucessfully filled new tile");
+
+        unsetActivePiece();
     }
 
     public void unsetActivePiece() {

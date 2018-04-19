@@ -11,4 +11,6 @@ public abstract class Tile extends Rectangle {
 
     abstract boolean setPiece(Piece p);
     abstract Piece getPiece();
+    abstract void lightBackgroundOn();
+    abstract void lightBackgroundOff();
 }

@@ -10,9 +10,9 @@ public abstract class Piece extends Ellipse {
     // in pixels
     double mouseX;
     double mouseY;
-
     int validDirection;
 
+    // State template will change how far can a piece move depending on it`s type.
     protected State currentState;
 
     public boolean move(int newX, int newY) {
@@ -26,6 +26,10 @@ public abstract class Piece extends Ellipse {
 
     public boolean movingPossible(int newX, int newY) {
         return currentState.movingPossible(x, y, newX, newY, validDirection);
+    }
+
+    public int range() {
+        return currentState.getRange();
     }
 
     public void cancelMoving() {
