@@ -73,9 +73,12 @@ public class SimpleBoard extends Board{
         activePiece.move(x, y);
         if (oldPlace.setPiece(null))
             System.out.println("successully freed old tile");
+        else
+            System.out.println("cannot free old tile");
         if (newPlace.setPiece(activePiece))
             System.out.println("sucessfully filled new tile");
-
+        else
+            System.out.println("cannot fill new tile");
         unsetActivePiece();
     }
 

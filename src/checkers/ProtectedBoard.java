@@ -57,15 +57,17 @@ public class ProtectedBoard extends Board {
                     continue;
                 if (t.x == oldPlace.x || t.y == oldPlace.y)
                     continue;
+                if (Math.abs(t.x - oldPlace.x) != Math.abs(t.y - oldPlace.y))
+                    continue;
                 if (isValidKillMove(oldPlace, t.x, t.y))
                     candidates.add(t);
             }
+
             if (!candidates.isEmpty())
                 return;
+
             for (Tile t: controlledBoard.tiles) {
                 if (!getActivePiece().movingPossible(t.x, t.y))
-                    continue;
-                if (t.x == oldPlace.x || t.y == oldPlace.y)
                     continue;
                 if (t.getPiece() != null)
                     continue;
@@ -78,9 +80,6 @@ public class ProtectedBoard extends Board {
     protected boolean isValidKillMove(Piece killer, int x, int y) {
         int xShift = (x - killer.x) / Math.abs(x - killer.x);
         int yShift = (y - killer.y) / Math.abs(y - killer.y);
-
-        System.out.printf("checking %d %d\t\t", x, y);
-        System.out.printf("xshift: %d, yshift: %d\n", xShift, yShift);
 
         int curX = killer.x + xShift;
         int curY = killer.y + yShift;
@@ -104,16 +103,16 @@ public class ProtectedBoard extends Board {
 
         int curX = p.x + xShift;
         int curY = p.y + yShift;
-        boolean pieceOccured = false;
+        boolean pieceOccurred = false;
 
-        while (curX != x && curY != y && Math.abs(curX - x) <= p.range() && !pieceOccured) {
-            Piece occured = getPiece(curX, curY);
-            if (occured != null)
-                pieceOccured = true;
+        while (curX != x && curY != y && Math.abs(curX - x) <= p.range() && !pieceOccurred) {
+            Piece occurred = getPiece(curX, curY);
+            if (occurred != null)
+                pieceOccurred = true;
             curX += xShift;
             curY += yShift;
         }
-        if (pieceOccured)
+        if (pieceOccurred)
             return true;
         return false;
     }
@@ -143,8 +142,10 @@ public class ProtectedBoard extends Board {
                 return;
             }
         }
-        controlledBoard.getActivePiece().cancelMoving();
-        unsetActivePiece();
+        if (controlledBoard.getActivePiece() != null) {
+            controlledBoard.getActivePiece().cancelMoving();
+            unsetActivePiece();
+        }
     }
 
     @Override

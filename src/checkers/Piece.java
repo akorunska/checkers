@@ -16,8 +16,6 @@ public abstract class Piece extends Ellipse {
     protected State currentState;
 
     public boolean move(int newX, int newY) {
-        if (!movingPossible(newX, newY))
-            return false;
         relocate(newX * Board.tileSize, newY * Board.tileSize);
         x = newX;
         y = newY;
