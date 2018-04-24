@@ -46,4 +46,8 @@ public class BoardContent {
 
         return t.getPiece();
     }
+
+    public void removePiece(Piece p) {
+        pieces.remove(p);
+    }
 }

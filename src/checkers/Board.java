@@ -22,7 +22,7 @@ public abstract class Board {
 
     public abstract Piece getActivePiece();
 
-    public abstract void relocateActivePiece(int x, int y);
+    public abstract Piece relocateActivePiece(int x, int y);
 
     public abstract void unsetActivePiece();
 }

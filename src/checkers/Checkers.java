@@ -1,6 +1,7 @@
 package checkers;
 
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -21,8 +22,11 @@ public class Checkers extends Application {
         Pane root = new Pane();
 
         root.setPrefSize(Board.width * Board.tileSize, Board.heigth * Board.tileSize);
-        root.getChildren().add(board.tilesToGroup());
-        root.getChildren().add(board.piecesToGroup());
+
+        Group tilesGroup = board.tilesToGroup();
+        Group piecesGroup = board.piecesToGroup();
+        root.getChildren().add(tilesGroup);
+        root.getChildren().add(piecesGroup);
 
         root.setOnMousePressed(e -> {
             int x = (int) e.getSceneX() / Board.tileSize;
@@ -35,7 +39,10 @@ public class Checkers extends Application {
             int x = (int) e.getSceneX() / Board.tileSize;
             int y = (int) e.getSceneY() / Board.tileSize;
 
-            board.relocateActivePiece(x, y);
+            Piece killed = board.relocateActivePiece(x, y);
+            if (killed != null) {
+                piecesGroup.getChildren().remove(killed);
+            }
         });
 
         return root;

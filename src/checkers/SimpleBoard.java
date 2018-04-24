@@ -40,7 +40,7 @@ public class SimpleBoard extends Board{
         return activePiece;
     }
 
-    public void relocateActivePiece(int x, int y) {
+    public Piece relocateActivePiece(int x, int y) {
         Tile newPlace = boardContent.getTile(x, y);
         Tile oldPlace = boardContent.getTile(activePiece.x, activePiece.y);
 
@@ -48,6 +48,7 @@ public class SimpleBoard extends Board{
         oldPlace.setPiece(null);
         newPlace.setPiece(activePiece);
         unsetActivePiece();
+        return null;
     }
 
     public void unsetActivePiece() {
