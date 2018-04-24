@@ -32,4 +32,9 @@ public class LightPiece extends Piece {
     public boolean isEnemyPiece(Piece p) {
         return p instanceof DarkPiece;
     }
+
+    @Override
+    protected void updateToKing() {
+        setFill(Color.valueOf("#EDE625"));
+    }
 }

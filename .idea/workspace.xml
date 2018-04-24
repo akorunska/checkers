@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b414bc77-b929-4f17-a2b0-503f9c7f5a5d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/checkers/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkers/BoardContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/BoardContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkers/Checkers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/Checkers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkers/ProtectedBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/ProtectedBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkers/SimpleBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/SimpleBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkers/DarkPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/DarkPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkers/LightPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/LightPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkers/ManState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/ManState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkers/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/Piece.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Checkers.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Checkers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/checkers/Checkers.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
@@ -30,13 +29,83 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PieceMover.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/checkers/PieceMover.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ProtectedBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/checkers/ProtectedBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
+            <state relative-caret-position="577">
               <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Piece.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/checkers/Piece.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <folding>
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1479#1480#0" expanded="true" />
+                <element signature="e#2004#2005#0" expanded="true" />
+                <element signature="e#2028#2029#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LightPiece.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/checkers/LightPiece.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="613">
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <folding>
+                <element signature="e#955#956#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1051#1052#0" expanded="true" />
+                <element signature="e#1100#1101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DarkPiece.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/checkers/DarkPiece.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <folding>
+                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+                <element signature="e#1048#1049#0" expanded="true" />
+                <element signature="e#1097#1098#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/checkers/ManState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-start-column="2" selection-end-line="21" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#644#0" expanded="true" />
+                <marker date="1524559622614" expanded="true" signature="2:643" ph="..." />
               </folding>
             </state>
           </provider>
@@ -91,11 +160,7 @@
         <option value="$PROJECT_DIR$/src/checkers/Tile.java" />
         <option value="$PROJECT_DIR$/src/checkers/LightTile.java" />
         <option value="$PROJECT_DIR$/src/checkers/State.java" />
-        <option value="$PROJECT_DIR$/src/checkers/ManState.java" />
         <option value="$PROJECT_DIR$/src/checkers/DarkTile.java" />
-        <option value="$PROJECT_DIR$/src/checkers/Piece.java" />
-        <option value="$PROJECT_DIR$/src/checkers/DarkPiece.java" />
-        <option value="$PROJECT_DIR$/src/checkers/LightPiece.java" />
         <option value="$PROJECT_DIR$/src/checkers/PieceCommand.java" />
         <option value="$PROJECT_DIR$/src/checkers/Dictonary.java" />
         <option value="$PROJECT_DIR$/src/checkers/PieceMover.java" />
@@ -104,6 +169,10 @@
         <option value="$PROJECT_DIR$/src/checkers/BoardContent.java" />
         <option value="$PROJECT_DIR$/src/checkers/ProtectedBoard.java" />
         <option value="$PROJECT_DIR$/src/checkers/Checkers.java" />
+        <option value="$PROJECT_DIR$/src/checkers/ManState.java" />
+        <option value="$PROJECT_DIR$/src/checkers/Piece.java" />
+        <option value="$PROJECT_DIR$/src/checkers/LightPiece.java" />
+        <option value="$PROJECT_DIR$/src/checkers/DarkPiece.java" />
       </list>
     </option>
   </component>
@@ -142,6 +211,20 @@
               <item name="checkers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="checkers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="checkers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="checkers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="checkers" type="462c0819:PsiDirectoryNode" />
+              <item name="LightPiece" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="checkers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="checkers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="checkers" type="462c0819:PsiDirectoryNode" />
+              <item name="PieceMover.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -252,12 +335,12 @@
       <workItem from="1524220501553" duration="899000" />
       <workItem from="1524382571538" duration="8405000" />
       <workItem from="1524394451207" duration="1482000" />
-      <workItem from="1524557441909" duration="1646000" />
+      <workItem from="1524557441909" duration="2923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43414000" />
+    <option name="totallyTimeSpent" value="44691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1368" height="723" extended-state="6" />
@@ -273,7 +356,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28082192" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.07705479" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -644,42 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkers/ManState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkers/DarkPiece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding>
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#990#991#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkers/LightPiece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-          <folding>
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkers/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/checkers/ProtectedPiece.java" />
     <entry file="file://$PROJECT_DIR$/src/checkers/MoveCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/checkers/KillCommand.java" />
@@ -688,16 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkers/PieceMover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1192">
-          <caret line="92" column="76" selection-start-line="92" selection-start-column="76" selection-end-line="92" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,9 +776,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkers/Checkers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkers/PieceMover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/checkers/ProtectedBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
+        <state relative-caret-position="577">
           <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -749,12 +806,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkers/Checkers.java">
+    <entry file="file://$PROJECT_DIR$/src/checkers/ManState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+        <state>
+          <caret selection-start-column="2" selection-end-line="21" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#644#0" expanded="true" />
+            <marker date="1524559622614" expanded="true" signature="2:643" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkers/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#2004#2005#0" expanded="true" />
+            <element signature="e#2028#2029#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkers/LightPiece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding>
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkers/DarkPiece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding>
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
           </folding>
         </state>
       </provider>
