@@ -27,4 +27,9 @@ public class LightPiece extends Piece {
                     e.getSceneY() - mouseY + y * Board.tileSize);
         });
     }
+
+    @Override
+    public boolean isEnemyPiece(Piece p) {
+        return p instanceof DarkPiece;
+    }
 }

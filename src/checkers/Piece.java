@@ -26,6 +26,8 @@ public abstract class Piece extends Ellipse {
         return currentState.movingPossible(x, y, newX, newY, validDirection);
     }
 
+    abstract public boolean isEnemyPiece (Piece p);
+
     public int range() {
         return currentState.getRange();
     }

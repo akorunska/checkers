@@ -12,16 +12,11 @@ public abstract class Board {
 
     protected Piece activePiece;
 
-    protected List<Tile> tiles = new ArrayList<Tile>();
-    protected List<Piece> pieces = new ArrayList<Piece>();
+    protected BoardContent boardContent;
 
     public abstract Group tilesToGroup();
 
     public abstract Group piecesToGroup();
-
-    public abstract Tile getTile(int x, int y);
-
-    public abstract Piece getPiece(int x, int y);
 
     public abstract void setActivePiece(int x, int y);
 
