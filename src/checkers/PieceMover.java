@@ -77,6 +77,9 @@ class MoveCommand implements PieceCommand {
         int curY = p.y + yShift;
 
         while (curX != x && curY != y && Math.abs(curX - x) <= p.range() - 1) {
+            Piece occurred = boardContent.getPiece(curX, curY);
+            if (occurred != null && p.isEnemyPiece(occurred))
+                return false;
             curX += xShift;
             curY += yShift;
         }
@@ -137,8 +140,10 @@ class KillCommand implements PieceCommand {
         boolean enemyOccurred = false;
         Piece occurred = null;
 
-        while (Math.abs(curX - x) <= killer.range() && curX != x && curY != y && !enemyOccurred) {
+        while (Math.abs(curX - x) <= killer.range() && curX != x && curY != y) {
             occurred = boardContent.getPiece(curX, curY);
+            if (enemyOccurred && occurred != null)
+                return null;
             if (occurred != null && killer.isEnemyPiece(occurred))
                 enemyOccurred = true;
             curX += xShift;
