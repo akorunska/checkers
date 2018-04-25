@@ -10,10 +10,13 @@ public abstract class Piece extends Ellipse {
     // in pixels
     double mouseX;
     double mouseY;
+
     int validDirection;
 
-    // State template will change how far can a piece move depending on it`s type.
-    protected State currentState;
+    boolean isActive;
+
+    // Strategy template will change how far can a piece move depending on it`s type.
+    protected PieceStrategy currentPieceStrategy;
 
     public boolean move(int newX, int newY) {
         relocate(newX * Board.tileSize, newY * Board.tileSize);
@@ -22,22 +25,32 @@ public abstract class Piece extends Ellipse {
 
         // checking if we should change state to super-privileged King
         if ((validDirection == -1 && y == 0) || validDirection == 1 && y == Board.heigth - 1) {
-            currentState = new KingState();
+            currentPieceStrategy = new KingPieceStrategy();
             updateToKing();
         }
         return true;
     }
 
+    public void setActive() {
+        isActive = true;
+    }
+
+    public void setUnactive() {
+        isActive = false;
+    }
+
     public boolean movingPossible(int newX, int newY) {
-        return currentState.movingPossible(x, y, newX, newY, validDirection);
+        return currentPieceStrategy.movingPossible(x, y, newX, newY, validDirection);
     }
 
     abstract public boolean isEnemyPiece (Piece p);
 
+    abstract public boolean belongsToPlayer (int playerNum);
+
     abstract protected void updateToKing();
 
     public int range() {
-        return currentState.getRange();
+        return currentPieceStrategy.getRange();
     }
 
     public void cancelMoving() {
@@ -45,7 +58,12 @@ public abstract class Piece extends Ellipse {
     }
 }
 
-class ManState implements State {
+interface PieceStrategy {
+    boolean movingPossible(int curX, int curY, int newX, int newY, int dir);
+    int getRange();
+}
+
+class ManPieceStrategy implements PieceStrategy {
 
     @Override
     public boolean movingPossible(int curX, int curY, int newX, int newY, int dir) {
@@ -66,7 +84,7 @@ class ManState implements State {
     }
 }
 
-class KingState implements State {
+class KingPieceStrategy implements PieceStrategy {
 
     @Override
     public boolean movingPossible(int curX, int curY, int newX, int newY, int dir) {

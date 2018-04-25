@@ -32,6 +32,11 @@ public class SimpleBoard extends Board{
         return piecesGroup;
     }
 
+    @Override
+    public BoardContent getBoardContent() {
+        return boardContent;
+    }
+
     public void setActivePiece(int x, int y) {
         activePiece = boardContent.getPiece(x, y);
     }

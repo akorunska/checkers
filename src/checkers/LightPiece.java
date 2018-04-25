@@ -7,7 +7,8 @@ public class LightPiece extends Piece {
         validDirection = -1;
         x = initialX;
         y = initialY;
-        currentState = new ManState();
+        currentPieceStrategy = new ManPieceStrategy();
+        isActive = true;
 
         setRadiusX(Board.tileSize * 0.45);
         setRadiusY(Board.tileSize * 0.3);
@@ -23,14 +24,23 @@ public class LightPiece extends Piece {
         });
 
         setOnMouseDragged(e -> {
-            relocate(e.getSceneX() - mouseX + x * Board.tileSize,
-                    e.getSceneY() - mouseY + y * Board.tileSize);
+            if (isActive) {
+                relocate(e.getSceneX() - mouseX + x * Board.tileSize,
+                        e.getSceneY() - mouseY + y * Board.tileSize);
+            }
         });
     }
 
     @Override
     public boolean isEnemyPiece(Piece p) {
         return p instanceof DarkPiece;
+    }
+
+    @Override
+    public boolean belongsToPlayer(int playerNum) {
+        if (playerNum == 1)
+            return true;
+        return false;
     }
 
     @Override

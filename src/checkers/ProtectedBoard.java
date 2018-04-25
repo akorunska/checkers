@@ -22,7 +22,16 @@ public class ProtectedBoard extends Board {
     }
 
     @Override
+    public BoardContent getBoardContent() {
+        return controlledBoard.boardContent;
+    }
+
+    @Override
     public void setActivePiece(int x, int y) {
+        if (controlledBoard.boardContent.getPiece(x, y) == null)
+            return;
+        if (!controlledBoard.boardContent.getPiece(x, y).isActive)
+            return;
         controlledBoard.setActivePiece(x, y);
         pickCandidates();
 
@@ -46,10 +55,8 @@ public class ProtectedBoard extends Board {
                 // calling kill via PieceMover
                 pieceMover.tryKilling(controlledBoard.boardContent, oldPlace, t);
             }
-
             if (!candidates.isEmpty())
                 return;
-
             for (Tile t: tiles) {
                 // calling move via PieceMover
                 pieceMover.tryMoving(controlledBoard.boardContent, oldPlace, t);
@@ -74,13 +81,14 @@ public class ProtectedBoard extends Board {
         for (Tile t: tiles) {
             if (t.x == x && t.y == y) {
                 killed = candidates.get(t);
-                System.out.println(killed);
                 controlledBoard.relocateActivePiece(x, y);
                 unsetActivePiece();
                 killPiece(killed);
+                lastOperationStatus = true;
                 return killed;
             }
         }
+        lastOperationStatus = false;
         if (controlledBoard.getActivePiece() != null) {
             controlledBoard.getActivePiece().cancelMoving();
             unsetActivePiece();

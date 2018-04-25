@@ -8,6 +8,12 @@ import javafx.stage.Stage;
 
 public class Checkers extends Application {
     Board board = new ProtectedBoard();
+    ActivePlayer activePlayer = new ActivePlayer();
+
+//    Checkers () {
+//        board = new ProtectedBoard();
+//        activePlayer = new ActivePlayer(board);
+//    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -39,7 +45,7 @@ public class Checkers extends Application {
             int x = (int) e.getSceneX() / Board.tileSize;
             int y = (int) e.getSceneY() / Board.tileSize;
 
-            Piece killed = board.relocateActivePiece(x, y);
+            Piece killed = activePlayer.handleMove(board, x, y);
             if (killed != null) {
                 piecesGroup.getChildren().remove(killed);
             }
