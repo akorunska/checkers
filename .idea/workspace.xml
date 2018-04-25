@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b414bc77-b929-4f17-a2b0-503f9c7f5a5d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/checkers/ClassicRulesType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checkers/PoddavkiRulesType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checkers/RulesType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checkers/WinnerAnnouncer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/checkers/checkers/ActivePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/checkers/checkers/ActivePlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/checkers/checkers/Checkers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/checkers/checkers/Checkers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/checkers/checkers/KillCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/checkers/checkers/KillCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/checkers/checkers/PieceMover.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/checkers/checkers/PieceMover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/checkers/checkers/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/checkers/checkers/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/checkers/checkers/Player1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/checkers/checkers/Player1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/checkers/checkers/Player2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/checkers/checkers/Player2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkers/ActivePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/ActivePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkers/Checkers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/Checkers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkers/PieceMover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/PieceMover.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Checkers.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Checkers.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/checkers/Checkers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="259">
+              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,10 +26,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WinnerAnnouncer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WinnerAnnouncer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/checkers/WinnerAnnouncer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="390">
               <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -107,8 +93,8 @@
         <option value="$PROJECT_DIR$/src/checkers/PieceMover.java" />
         <option value="$PROJECT_DIR$/src/checkers/ClassicRulesType.java" />
         <option value="$PROJECT_DIR$/src/checkers/PoddavkiRulesType.java" />
-        <option value="$PROJECT_DIR$/src/checkers/Checkers.java" />
         <option value="$PROJECT_DIR$/src/checkers/WinnerAnnouncer.java" />
+        <option value="$PROJECT_DIR$/src/checkers/Checkers.java" />
       </list>
     </option>
   </component>
@@ -259,12 +245,12 @@
       <workItem from="1524394451207" duration="1482000" />
       <workItem from="1524557441909" duration="2995000" />
       <workItem from="1524588358790" duration="516000" />
-      <workItem from="1524662130819" duration="20133000" />
+      <workItem from="1524662130819" duration="20806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65412000" />
+    <option name="totallyTimeSpent" value="66085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1368" height="723" extended-state="6" />
@@ -280,7 +266,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.051369864" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.09589041" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -724,20 +710,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkers/Checkers.java">
+    <entry file="file://$PROJECT_DIR$/src/checkers/WinnerAnnouncer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="390">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkers/WinnerAnnouncer.java">
+    <entry file="file://$PROJECT_DIR$/src/checkers/Checkers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        <state relative-caret-position="259">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

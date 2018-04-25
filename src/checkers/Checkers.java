@@ -17,11 +17,6 @@ public class Checkers extends Application {
     ActivePlayer activePlayer = new ActivePlayer();
     WinnerAnnouncer winnerAnnouncer;
 
-//    Checkers () {
-//        board = new ProtectedBoard();
-//        activePlayer = new ActivePlayer(board);
-//    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         Scene scene = new Scene(setupContent());
