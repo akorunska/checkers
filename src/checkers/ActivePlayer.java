@@ -21,6 +21,8 @@ public class ActivePlayer {
     }
 
     public Piece handleMove(Board board, int x, int y) {
+        if (active == null)
+            return null;
         Piece killed = active.handleInput(board, x, y);
 
         if (!board.lastOperationStatus)
@@ -30,17 +32,13 @@ public class ActivePlayer {
             switchPlayer(board);
         } else {
             passive.setPieceAsKilled(killed);
-            System.out.printf("killed piece in %d %d\n", killed.x, killed.y);
 
             Piece killer = board.getBoardContent().getPiece(x, y);
-            System.out.println("Killer is " + killer);
             PieceMover pieceMover = new PieceMover(null);
 
             if (pieceMover.killMovesExist(board.getBoardContent(), killer)) {
-                System.out.println("i want move blood");
                 active.initiateMove(board);
             } else {
-                System.out.println("no more deaths today");
                 switchPlayer(board);
             }
         }
@@ -59,7 +57,8 @@ public class ActivePlayer {
             passive = player2;
         }
 
-        System.out.println("player switched");
+        if (active.remainingPieces == 0)
+            active = null;
     }
 }
 

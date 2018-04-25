@@ -21,7 +21,7 @@ public class PieceMover {
     }
 
     public boolean movesExist(BoardContent boardContent, Piece toCheck) {
-        return move.movesExist(boardContent, toCheck);
+        return move.movesExist(boardContent, toCheck) || kill.movesExist(boardContent, toCheck);
     }
 
     public boolean killMovesExist(BoardContent boardContent, Piece toCheck) {
@@ -122,11 +122,8 @@ class KillCommand implements PieceCommand {
                 continue;
             if (Math.abs(t.x - active.x) != Math.abs(t.y - active.y))
                 continue;
-            if (isValidKillMove(boardContent, active, t.x, t.y) != null) {
-                System.out.printf("piece in %d %d can kill piece in %d %d\n", active.x, active.y,
-                        t.x, t.y);
+            if (isValidKillMove(boardContent, active, t.x, t.y) != null)
                 return true;
-            }
         }
         return false;
     }
